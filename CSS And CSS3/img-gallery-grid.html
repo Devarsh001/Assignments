@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body 
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .main
+        {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            gap: 2px;
+        }
+        img
+        {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .gallery
+        {
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            gap: 2px;
+        }
+        .row1{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .row2
+        {
+            display: grid;
+            grid-template-columns:2fr 3fr 2fr ;
+            gap: 2px;
+        }
+        .row3{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap: 2px;
+        }
+        .row4
+        {
+            display: grid;
+            grid-template-columns:2fr 2fr 2fr ;
+            gap: 2px;
+        }
+        .menu{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .shutter
+        {
+            font-size: 40px;
+            padding-left: 50%;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .list-nav li{
+            list-style-type: none;
+            padding-left: 80%;
+            padding-top: 10px;
+        }
+        .social ul{
+            padding-left: 40%;
+            padding-top: 10%;
+        }
+        .social li
+        {
+            display: inline;
+            padding-left: 0px;
+            padding-top: 0px;
+            font-size: 30px;
+            padding-right: 10px;
+        }
+        @media(max-width:650px)
+        {
+            .main{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .gallery{
+                display: grid;
+                grid-template-rows: 1fr;
+            }
+            .row1{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .row2{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .row3{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .row4{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            li{display: inline;}
+            .shutter{
+                padding: 0;
+            }
+            .list-nav li{
+                padding: 0;
+                padding-right: 20px;
+            }
+            .social ul{
+                padding: 0;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        
+        <div class="gallery">
+            <div class="row1">
+                <div class="col1"><img src="Images/background-images.jpeg" alt=""></div>
+                <div class="col2"><img src="Images/BackGround-WebSite.jpg" alt=""></div>
+            </div>
+            <div class="row2">
+                <div class="col1"><img src="Images/BG-Filter-Card.jpg" alt=""></div>
+                <div class="col2"><img src="Images/task1.jpg" alt=""></div>
+                <div class="col3"><img src="Images/task2.jpg" alt=""></div>
+            </div>
+            <div class="row3">
+                <div class="col1"><img src="Images/task3.jpg" alt=""></div>
+                <div class="col2"><img src="Images/task4.jpg" alt=""></div>
+            </div>
+            <div class="row4">
+                <div class="col1"><img src="Images/task6.jpeg" alt=""></div>
+                <div class="col2"><img src="Images/task7.jpeg" alt=""></div>
+                <div class="col3"><img src="Images/task8.jpeg" alt=""></div>
+            </div>
+        </div>
+        
+        <div class="menu">
+
+            <div class="shutter">Shutter</div>
+            
+            <div class="list-nav">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">photos</a></li>
+                    <li><a href="">bio</a></li>
+                    <li><a href="">blog</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>

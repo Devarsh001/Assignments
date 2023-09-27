@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main
+        {
+            height: 100vh;
+            width: 100%;
+            background: url(Images/BackGround-WebSite.jpg);
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+
+        /* ----------------------------------- */
+
+        .text
+        {
+            height: 100vh;
+            width: 50%;
+            background-color: black;
+            position: relative;
+            text-align: left;
+            z-index: 0;
+        }
+        .services
+        {
+            position: absolute;
+            /* background: white; */
+            color: gray;
+            display: grid;
+            height: inherit;
+            width: 100%;
+            padding: 100px 60px;
+            text-align: right;
+        }
+        h1,h3{cursor: pointer;}
+        span
+        {
+            font-weight: bolder;
+        }
+        .or
+        {
+            color: orangered;
+        }
+
+        /* ----------------------------------- */
+        
+        .circle1, .circle2, .circle3
+        {
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .circle1
+        {
+            top: 15vh;
+            transform: translate(-50%,0);
+        }
+        .circle2
+        {
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .circle3
+        {
+            bottom: 15vh;
+            transform: translate(-50%,0);
+        }
+       </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="circle1">
+            <i class="fa-solid fa-desktop" id="i1"></i>
+        </div>
+
+        <div class="circle2">
+            <i class="fa-solid fa-sheet-plastic"></i>
+        </div>
+
+        <div class="circle3">
+            <i class="fa-solid fa-camera"></i>
+        </div>
+
+        <div class="text">
+            <div class="services">
+                <h1>OUR SERVICES <span class="or">|</span></h1>
+                 <div class="wpp">
+                    <h3 class="or">Web Design</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sunt doloremque enim odit fugit accusantium iusto harum, voluptas fuga alias!</p>
+                 </div>
+                 <div class="wpp">
+                    <h3 class="or">Print Design</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sunt doloremque enim odit fugit accusantium iusto harum, voluptas fuga alias!</p>
+                 </div>
+                 <div class="wpp">
+                    <h3 class="or">Photography</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sunt doloremque enim odit fugit accusantium iusto harum, voluptas fuga alias!</p>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
