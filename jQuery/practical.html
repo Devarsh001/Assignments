@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ans-4</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .container *
+        {
+            display: block;
+            border: 2px solid lightgray;
+            padding: 10px 15px;
+            color: lightgray;
+        }
+        .you
+        {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gg_gp">Great Great Grand Parent (Body)
+            <div class="g_gp">Great Grand Parent (Div)
+                <ul class="gp">Grand Parent (ul)
+                    <li class="p">Parent (li)
+                        <span class="you">Child / You (span)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $("span").parentsUntil(".container").css({"color": "red", "border": "2px solid red"});
+</script>
+</html>

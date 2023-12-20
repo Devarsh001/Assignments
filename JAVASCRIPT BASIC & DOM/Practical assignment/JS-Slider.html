@@ -15,14 +15,19 @@
             flex-direction: column;
             gap: 20px;
         }
-        .images
+        .container2
         {
             display: flex;
+            justify-content: space-between;
+        }
+        .images
+        {
+            display: block;
             /* overflow: scroll; */
             align-items: center;
             gap: 15px;
         }
-        .i1,.i5
+        /* .i1,.i5
         {
             height: 150px;
             width: 150px;
@@ -42,29 +47,29 @@
         }
         .i1
         {
-            background: url(Images/1.jpeg);
+            background: url(../Images/1.jpeg);
         }
         .i2
         {
-            background: url(Images/2.jpeg);
+            background: url(../Images/2.jpeg);
         }
         .i3
         {
-            background: url(Images/3.jpeg);
+            background: url(../Images/3.jpeg);
         }
         .i4
         {
-            background: url(Images/4.jpeg);
+            background: url(../Images/4.jpeg);
         }
         .i5
         {
-            background: url(Images/5.jpeg);
+            background: url(../Images/5.jpeg);
         }
         .i1,.i2,.i3,.i4,.i5
         {
             background-size: cover;
             background-position: center;
-        }
+        } */
         .btns
         {
             display: flex;
@@ -84,36 +89,46 @@
 </head>
 <body>
     <div class="container">
+        
         <h1>Simple JavaScript Slider</h1>
-        <div class="images">
-            <div class="i1"></div>
-            <div class="i2"></div>
-            <div class="i3"></div>
-            <div class="i4"></div>
-            <div class="i5"></div>
+        
+        <div class="container2">
+            <div class="images">
+                <img src="../Images/1.jpeg" alt="" height="100px" width="100px">
+            </div>
+            <div class="images">
+                <img src="../Images/2.jpeg" alt="" height="100px" width="100px">
+            </div>
+            <div class="images">
+                <img src="../Images/3.jpeg" alt="" height="100px" width="100px">
+            </div>
+            <div class="images">
+                <img src="../Images/4.jpeg" alt="" height="100px" width="100px">
+            </div>
+            <div class="images">
+                <img src="../Images/5.jpeg" alt="" height="100px" width="100px">
+            </div>
         </div>
+        
         <div class="btns">
             <button id="b1" onclick="next()">&lt;--</button>
             <button id="b2" onclick="prev()">--&gt;</button>
         </div>
+
     </div>
 
     <script>
-        b1 = document.getElementById('b1');
-        b2 = document.getElementById('b2');
-        i1 = document.getElementsByClassName('i1');
-        i2 = document.getElementsByClassName('i2');
-        i3 = document.getElementsByClassName('i3');
-        i4 = document.getElementsByClassName('i4');
-        i5 = document.getElementsByClassName('i5');
+        let images = document.getElementsByTagName('img');
+        console.log(images);
+        
+        let mid = Math.trunc((images.length)/2);
 
-        function next() 
+        function next()
         {
-
-        }
-        function prev() 
-        {
-            
+            for(let i=0;i<=mid;i++) 
+            {
+                images[i]=images[i+1]
+            }
         }
     </script>
 </body>

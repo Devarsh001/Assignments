@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Que-Ans</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        h1
+        {
+            text-align: center;
+        }
+        h3{cursor: pointer;}
+        .ans1,.ans2,.ans3
+        {
+            display: none;
+        }
+        a{text-decoration: none; color: black;}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>-- Click on question to open and close (Toggle) answer --</h1>
+        <hr />
+        <h3 class="que1">1. What is jQuery?</h3>
+        <h5 class="ans1">==> It is a javascript framework.</h5>
+        <hr />
+
+        <h3 class="que2">2. How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery, JQuery Animation?</h3>
+        <h5 class="ans2">==> We can apply css using different built-in methods of jQuery. The methods are;
+            <li>css()</li>
+            <li>addClass()</li>
+            <li>removeClass()</li>
+            <li>toggleClass()</li>
+            
+            <ol>
+                <li><strong><mark>css()</mark></strong> : Using css() method we can set or return one or more style properties for the selected elements. <br> <i>Syntax:</i> $(element).css("propertyname","value"); to apply single css property <br> <i>Syntax:</i> $(element).css({"propertyname": "value", "propertyname": "value", "propertyname": "value"}); to apply multiple style/css to element.</li> <br />
+
+                <li><strong><mark>addClass()</mark></strong> : Using addClass() method we can add one or more classes to the selected elements.<br> <i>Syntax:</i> $(element).addClass("class1"); to apply single css property <br> <i>Syntax:</i> $(element).addClass("class1 class2 classs3"); to apply multiple style/css to element.</li> <br />
+
+                <li><strong><mark>removeClass()</mark></strong> : Using removeClass() method we can remove one or more classes from the selected elements.<br> <i>Syntax:</i> $(element).removeClass("class1"); to apply single css property <br> <i>Syntax:</i> $(element).removeClass("class1 class2 classs3"); to apply multiple style/css to element.</li> <br />
+                
+                <li><strong><mark>toggleClass()</mark></strong> : Using toggleClass() method we can toggle between adding/removing classes from the selected elements.<br> <i>Syntax:</i> $(element).toggleClass("class1");</li>
+            </ol>
+
+            <p>==> We can create <strong>animation</strong> using the <strong>animate()</strong> method of jQuery.<br><i>Syntax:</i> $(selector).animate({params},speed,callback);</p>
+        </h5>
+        
+        <hr />
+        <h3 class="que3">3. How to create slider with animation?</h3>
+        <h5 class="ans3">==> There are three built-in methods in jQuery to apply sliding effect on elements.
+            <li>slideDown()</li>
+            <li>slideUp()</li>
+            <li>slideToggle()</li>
+
+            <ol>
+                <li><strong><mark>slideDown()</mark></strong> : The slideDown() method is used to slide down an element. <br><i>Syntax:</i> $(selector).slideDown(speed,callback);</li> <br />
+                
+                <li><strong><mark>slideUp()</mark></strong> : The slideUp() method is used to slide up an element. <br><i>Syntax:</i> $(selector).slideUp(speed,callback);</li> <br />
+                
+                <li><strong><mark>slideToggle()</mark></strong> : The slideToggle() method toggles between the slideDown() and slideUp() methods. <br> If the elements have been slid down, slideToggle() will slide them up. <br> If the elements have been slid up, slideToggle() will slide them down. <br><i>Syntax:</i> $(selector).slideToggle(speed,callback);</li> <br />
+            </ol>
+        </h5>
+        <hr />
+        <h3 class="que4"><a href="practical.html" target="_blank">4. Event bubbling tickling example</a></h3>
+        <hr />
+    </div>    
+
+
+    <script>
+        $('.que1').click(
+            function(){
+                $('.ans1').slideToggle("medium");
+            }
+        )
+        $('.que2').click(
+            function(){
+                $('.ans2').slideToggle("medium");
+            }
+        )
+        $('.que3').click(
+            function(){
+                $('.ans3').slideToggle("medium");
+            }
+        )
+    </script>
+</body>
+</html>
