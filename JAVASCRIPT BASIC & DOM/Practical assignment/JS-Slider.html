@@ -4,61 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
-    <style>
-        .container
-        {
-            background: gray;
-            text-align: center;
-            width: 70%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .container2
-        {
-            display: flex;
-            align-items: center;
-        }
-        .i1,.i5
-        {
-            height: 150px;
-            width: 150px;
-        }
-        .i2,.i4
-        {
-            height: 200px;
-            width: 200px;
-            background: url(Images/1.jpeg);
-            background-size: cover;
-        }
-        .i3
-        {
-            height: 250px;
-            width: 250px;
-            background: url(Images/2.jpeg);
-        }
-        .btns
-        {
-            display: flex;
-            margin: auto;
-            width: 20%;
-            justify-content: space-between;
-        }
-        button
-        {
-            background: transparent;
-            outline: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        * img
-        {
-            object-fit: cover;
-            object-position: center;
-        }
-    </style>
+    <link rel="stylesheet" href="slider.css">
+    <!-- <link rel="stylesheet" href="sliderMedia.css"> -->
 </head>
 <body>
     <div class="container">
@@ -85,7 +32,7 @@
         
         <div class="btns">
             <button id="b1" onclick="prev()">&lt;--</button>
-            <button id="b2" onclick="next()">--&gt;</button>
+            <button id="b2" onclick="next()">--&gt</button>
         </div>
 
     </div>
