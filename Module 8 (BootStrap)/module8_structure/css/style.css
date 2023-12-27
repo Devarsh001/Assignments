@@ -1,0 +1,10 @@
+.card img {
+    border-radius: 50%;
+}
+.imgCardImg img{
+    height: 100%;
+    width: 100%;
+}
+img,.fa,.text-info {
+    cursor: pointer;
+}
