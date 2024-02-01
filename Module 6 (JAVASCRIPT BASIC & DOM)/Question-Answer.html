@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jav-Script & Basic DOM Question-Answer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            color: orangered;
+        }
+        input, button {
+            border: none;
+            outline: none;
+            padding: 5px;
+            background: rgba(255,165,0,0.5);
+            color: white;
+            cursor: pointer;
+        }
+        ::placeholder {
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+            color: orangered;
+        }
+        .arr {
+            color: orange;
+        }
+        .que {
+            color: orange;
+            padding: 3px 0;
+        }
+        .main {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 10px;
+            box-shadow: 10px 10px 10px 10px #0000002e;
+        } 
+        .main div {
+            padding: 10px;
+            background: black;
+            box-shadow: 2px 2px 2px 2px #0000002e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Logic Question</h1>
+        <div class="main">
+            <!-- 1 -->
+            <div>
+                <li class="que">Q.1 What is JavaScript. How to use it?</li>
+                <li><span class="arr">==></span> JavaScript is a client-side scripting language. JavaScript is object oriented language. </li>
+                <li><span class="arr">==></span> Using JavaScript we can change the behaviour of a webpage. We can add multiple functionality to the webpage. We can make dynamic changes in webpage/website using Javascript.</li>
+            </div>
+            <!-- 2 -->
+            <div>
+                <li class="que">Q.2 How many type of Variable in JavaScript?</li>
+                <li><span class="arr">==></span> variables in JavaScript are used to store values. We can store any type of values/data in it. such as, primitive data-types and non-primitive data-tyapes.</li>
+                <li><span class="arr">==></span> Three types of variables are available in Javascript :
+                    <br>1. var - re-assignment and re-declaration is allowed in var variable in JavaScript
+                    <br>2. let - re-assignment is allowed in let variable but re declaration is not allowed while using let variable in JavaScript
+                    <br>3. const - re-declaration and re-assignment is not allowed while using const variable in JavaScript.
+                </li>
+            </li>
+            </div>    
+            <!-- 3 -->
+            <div>
+                <li class="que">Q.3 Define a Data Types in js?</li>
+                <li><span class="arr">==></span> Data types in JavaScript represents what kind of value the variable holds.</li>
+                <li><span class="arr">==></span> Data types are categorized in two types :
+                    <br>1. Primitive data-type / built-in data-type
+                    <br>2. Non-premitive data-type / derived data-type
+                </li>
+            </div>
+            <!-- 4 -->
+            <div>
+                <li class="que">Q.4 Write a mul Function Which will Work Properly When invoked With Following Syntax.</li>
+            <li><span class="arr">==></span> The MUL function is a miniature of the multiplication function.</li>
+            <li><span class="arr">==></span> In this function, we call the function that required an argument as a first number, and that function calls another function that required another argument and this step goes on. </li>
+            <li>Syntax : <br> function mul(x) {return function (y) {return function (z) {return x * y * z;};};}</li>
+            </div>
+            <!-- 5 -->
+            <div>
+                <li class="que">Q5 What the deference between undefined and undeclare in JavaScript?</li>
+                <li><span class="arr">==></span> undefied : When we declare a variable but does not assign a value to it and print/console it, it will display un defined.</li>
+                <li><span class="arr">==></span> undeclare : When we do not declare a variable but try to print/console it, it will throw declaration error.</li>
+            </div>
+            <!-- 6 -->
+            <div>
+                <li class="que">Q.6 Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another. Using console.log() print out the following quote by Mother Teresa:</li>
+                <li><span class="arr">==></span> The quote <span id="ans6">'There is no exercise better for the heart than reaching down and lifting people up.'</span>  by John Holmes teaches us to help one another. <strong>Inspect Page to show the quote in console!!</strong> <script> let span = document.getElementById("ans6"); console.log("Ans.6 console the Quote"+span.innerHTML);</script></li>
+            </div>
+            <!-- 7 -->
+            <div>
+                <li class="que">Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</li>
+                <li><span class="arr">==></span> The typeof '10' is not equal to 10, as '10' is considered as string in JavaScript while 10 is integer. So, when we match both using '==='(strict equals) it will show false as one is integer and secong is string. Below is code that will fix it.
+                    <script>
+                        let a = '10';
+                        let b = 10;
+                        console.log("Ans.7 type of '10' :"+typeof a);
+                        console.log("Ans.7 type of 10 :"+typeof b);
+                        console.log("Ans.7 before solve : " + (a === b));
+                        // fix the issue
+                        console.log("Ans.7 After solve : " + (Number(a) === Number(b)));
+                    </script>
+                </li>
+            </div>
+            <!-- 8 -->
+            <div>
+                <li class="que">Q.8 Write a JavaScript Program to find the area of a triangle?</li>
+                <li><span class="arr">==></span> the formula to find the area of triange is <strong>1/2 * base * height</strong>.</li>
+                <script>
+                    let base = 10;
+                    let height = 20;
+                    const triArea = (1/2)*base*height;
+                    console.log("Ans.8 triangle area : "+triArea);
+                </script>
+            </div>
+            <!-- 9 -->
+            <div>
+                <li class="que">Q.9 Write a JavaScript program to calculate days left until next Christmas?</li>
+                <li><span class="arr">==></span> The code to calculate days left until next Christmas is :
+                    <script>
+                        let today = new Date();
+                        let christmasYear = today.getFullYear();
+
+                        if (today.getMonth() == 11 && today.getDate() > 25) {
+                        christmasYear = christmasYear + 1;
+                        }
+
+                        let christmasDate = new Date(christmasYear, 11, 25);
+                        let dayMilliseconds = 1000 * 60 * 60 * 24;
+
+                        let remainingDays = Math.ceil(
+                        (christmasDate.getTime() - today.getTime()) /
+                        (dayMilliseconds));
+                        console.log("Ans.9 Days left until next christmas are : "+remainingDays);
+                    </script>
+                </li>
+            </div>
+            <!-- 10 -->
+            <div>
+                <li class="que">Q.10 What is Condition Statement?</li>
+                <li><span class="arr">==></span> Conditional statements in Javascript checks the conditions and it will control whether the piece of code an run or not.</li>
+                <li><span class="arr">==></span> There are 5 types of conditional statements in JavaScript : <br>
+                    1. if statement : if(condition){..code}  <br>
+                    2. if else statement : if(condition){..code} else{..code} <br>
+                    3. ladder if else statement : if(condition){..code} else if(condition){..code} else{..code} <br>
+                    4. nested if else statement : if(condition){ if(condition){..code} else{..code} } else{ if(condition){..code} else if (condition){..code} else{..code} }<br>
+                    5. swich statements : switch(case.value) { case value: ..code;break; case value: ..code;break; default: ..code;}
+                </li>
+                
+            </div>
+            <!-- 11 -->
+            <div>
+                <li class="que">Q.11 Find circumference of Rectangle formula : C = 4 * a ?</li>
+                <li><span class="arr">==></span> formula is <strong>C = 4 * a</strong>
+                    <script>
+                        function recA(a){
+                            const recC = 4 * a;
+                            console.log("Ans.11 circumference of rectangle is : "+recC);
+                        }
+                        recA(5);
+                    </script>
+                </li>
+            </div>
+            <!-- 12 -->
+            <div>
+                <li class="que">Q.12 Write a progam to convert years into days and days into years?</li>
+                <li><span class="arr">==></span> Convert days to years :
+                    <script>
+                        function find(numOfDays) { 
+                            var year; 
+                            year = parseInt(numOfDays / 365); 
+                            console.log("Ans.12 " + numOfDays + " Days is equals to " + year + " year"); 
+                        } 
+                        find(400); 
+                        function find(numOfYears) { 
+                            var day; 
+                            day = parseInt(numOfYears * 365); 
+                            console.log("Ans.12 " + numOfYears + " years is equals to " + day + " days"); 
+                        } 
+                        find(2); 
+                    </script>
+                </li>
+            </div>
+            <!-- 13 -->
+            <div>
+                <li class="que">Q.13 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)</li>
+                <li><span class="arr">==></span> remained
+                    <script>
+                    </script>
+                </li>
+            </div>
+            <!-- 14 -->
+            <div>
+                <li class="que">Q.14 Write a JavaScript exercise to get the extension of a filename.?</li>
+                <li><span class="arr">==></span> <br>
+                        <input type="file" id="fileName">
+                        <button id="fileBtn">Get Extension</button>
+                        <span id="fileExt"></span>
+                    <script>
+                        let fileName = document.querySelector("#fileName");
+                        let button1 = document.querySelector("#fileBtn");
+                        let spanExt = document.querySelector("#fileExt");
+                        
+                        button1.addEventListener("click",function(){
+                            let fileNameVal = fileName.value;
+                            let extension = fileNameVal.split('.').pop();
+                            spanExt.innerHTML = extension;
+                        })
+                    </script>
+                </li>
+            </div>
+            <!-- 15 -->
+            <div>
+                <li class="que">Q.15 What is the result of the expression (5 > 3 && 2 < 4)?</li>
+                <li><span class="arr">==></span> <strong>true</strong>
+                        <script>
+                            console.log("Ans.'15 5 > 3 && 2 < 4?' " + (5 > 3 && 2 < 4));
+                        </script>
+                </li>
+            </div>
+            <!-- 16 -->
+            <div>
+                <li class="que">Q.16 What is the result of the expression (true && 1 && "hello")?</li>
+                <li><span class="arr">==></span> Hello 
+                    <script>
+                        console.log("Answer.16 (true && 1 && 'hello') Answer of this expression is : " + ((true && 1 && "hello")));
+                    </script>
+                </li>
+            </div>
+            <!-- 17 -->
+            <div>
+                <li class="que">Q.17 What is the result of the expression true && false || false && true?</li>
+                <li><span class="arr">==></span> False
+                    <script>
+                        console.log("Answer.17 (true && false || false && true) answe of this expression is : " + (true && false || false && true));
+                        // console.log((1 && 2 || 2 && 1)); // output is 2
+                    </script>
+                </li>
+            </div>
+            <!-- 18 -->
+            <div>
+                <li class="que">Q.18 What is a Loop and Switch Case in JavaScript define that ?</li>
+                <li><span class="arr">==></span> loop : Loops are used to execute a block of code multiple times.</li>
+                <li><span class="arr">==></span> switch : The switch statement evaluates an expression. The value of the expression is then compared with the values of each case in the structure.</li>
+            </div>
+            <!-- 19 -->
+            <div>
+                <li class="que">Q.19 What is the use of is Nan function?</li>
+                <li><span class="arr">==></span> The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not.</li>
+            </div>
+            <!-- 20 -->
+            <div>
+                <li class="que">Q.20 What is the difference between && and || in JavaScript?</li>
+                <li><span class="arr">==></span> In JavaScript && stands for logical and, while || stands for logical or.</li>
+                <li>&& : Logical and returns true when each condition is true.</li>
+                <li>|| : Logical or returns true when any one condition is true.</li>
+            </div>
+            <!-- 21 -->
+            <div>
+                <li class="que">Q.21 What is the use of Void (0)?</li>
+                <li><span class="arr">==></span> void(0) expression returns undefined primitive value. This is often used with hyperlinks.</li>
+            </div>
+            <!-- 22 -->
+            <div>
+                <li class="que">Q.22 Check Number Is Positive or Negative in JavaScript?</li>
+                <li><span class="arr">==></span> Enter Number : 
+                    <input type="text" id="numCheck">
+                    <button onclick="numChecker()">Click</button>
+                    <script>
+                        let numCheck = document.querySelector("#numCheck");
+                        function numChecker()
+                        {
+                            if(numCheck.value<0)
+                            {
+                                console.log("Ans.22 Enterd number is -ve.");
+                            }
+                            else {
+                                console.log("Ans.22 Enterd number is +ve.");
+                            }
+                        }
+                    </script>
+                </li>
+            </div>
+            <!-- 23 -->
+            <div>
+                <li class="que">Q.23 Find the Character Is Vowel or Not ?</li>
+                <li><span class="arr">==></span> Enter a character : 
+                    <input type="text" id="inpChar">
+                    <button onclick="charChecker()">Click</button>
+                    <script>
+                        let inpCha = document.querySelector("#inpChar");
+                        function charChecker()
+                        {
+                            if(inpCha.value == 'a' || inpCha.value == 'A' || inpCha.value == 'e' || inpCha.value == 'E' || inpCha.value == 'i' || inpCha.value == 'I' || inpCha.value == 'o' || inpCha.value == 'O' || inpCha.value == 'u' || inpCha.value == 'U')
+                            {
+                                console.log("Ans.23 Enter character is vowel");
+                            }
+                            else {
+                                console.log("Ans.23 Enter character is not vowel");
+                            }
+                        }
+                    </script>
+                </li>
+            </div>
+            <!-- 24 -->
+            <div>
+                <li class="que">Q.24 Write to check whether a number is negative, positive or zero?</li>
+                <li><span class="arr">==></span> Enter Number : 
+                    <input type="text" id="numCheck2">
+                        <button onclick="numChecker2()">Click</button>
+                        <script>
+                            let numCheck2 = document.querySelector("#numCheck2");
+                            function numChecker2()
+                            {
+                                if(numCheck2.value<0)
+                                {
+                                    console.log("Ans.24 Enterd number is -ve.");
+                                }
+                                else if(numCheck2.value==0)
+                                {
+                                    console.log("Ans.24 Enterd number is zero(0).");
+                                }
+                                else {
+                                    console.log("Ans.24 Enterd number is +ve.");
+                                }
+                            }
+                        </script>
+                </li>
+            </div>
+            <!-- 25 -->
+            <div>
+                <li class="que">Q.25 Write to find number is even or odd using ternary operator in JS?</li>
+                <li><span class="arr">==></span> Enter Number : 
+                    <input type="text" id="ternaryNum">
+                    <button onclick="oddEvenChecker()">Click</button>
+                    <script>
+                        let oddEven = document.querySelector("#ternaryNum");
+                        function oddEvenChecker() {
+                            let oeNum = oddEven.value;
+                            (oeNum % 2 == 0) ? console.log("Ans.25 Entered number is even") : console.log("Ans.25 Entered Number is odd");
+                        }
+                    </script>
+                </li>
+            </div>
+            <!-- 26 -->
+            <div>
+                <li class="que">Q.26 Write find maximum number among 3 numbers using ternary operator in JS?</li>
+                <li><span class="arr">==></span> Max Of 3 numbers using Ternary Operator :
+                    <script>
+                        let n1=5;
+                        let n2=9;
+                        let n3=2;
+
+                        let max = (n1>n2 && n1>n3) ? n1 : (n2>n3)?n2:n3;
+                        console.log(`Ans.26 Maximun from ${n1}, ${n2}, and ${n3} is ${max}`);
+                    </script>
+                </li>
+            </div>
+            <!-- 27 -->
+            <div>
+                <li class="que">Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?</li>
+                <li><span class="arr">==></span> Min Of 3 numbers using Ternary Operator : 
+                    <script>
+                        let x1=8;
+                        let x2=3;
+                        let x3=5;
+
+                        let min = (x1<x2 && x1<n3) ? x1 : (x2<x3)?x2:x3;
+                        console.log(`Ans.27 Minimum from ${x1}, ${x2}, and ${x3} is ${min}`);
+                    </script>
+                </li>
+            </div>
+            <!-- 28 -->
+            <div>
+                <li class="que">Q.28 Write to find the largest of three numbers in JS?</li>
+                <li><span class="arr">==></span> Max of three using conditional :
+                    <script>
+                        let y1 = 3;
+                        let y2 = 7;
+                        let y3 = 4;
+
+                        if(y1==y2 && y1==y3) {
+                            console.log(`Answer.28 Every Number is same..!!`);
+                        }
+                        else if(y1>y2 && y1>y3) {
+                            console.log(`Answer.28 Largest of ${y1}, ${y2}, and ${y3} is ${y1}`);
+                        }
+                        else if(y2>y3) {
+                            console.log(`Answer.28 Largest of ${y1}, ${y2}, and ${y3} is ${y2}`);
+                        }
+                        else {
+                            console.log(`Answer.28 Largest of ${y1}, ${y2}, and ${y3} is ${y3}`);
+                        }
+                    </script>
+                </li>
+            </div>
+            <!-- 29 -->
+            <div>
+                <li class="que">Q.29 Write to show Monday to Sunday using switch case in JS?
+                <li><span class="arr">==></span> Monday to Sunday using switch :
+                    <input type="text" id="numberDay" placeholder="Enter Number from 0 to 6 for weekday output">
+                    <button id="button">Click</button>
+                    <script>
+                        let clickButton = document.getElementById("button");
+                        clickButton.addEventListener("click", function weekDay() {
+                            let day = Number(document.getElementById("numberDay").value);
+                            switch (day) {
+                                case 0: console.log("It's Sunday!");
+                                break;
+                                case 1: console.log("It's Monday");
+                                break;
+                                case 2: console.log("It's Tuesday");
+                                break;
+                                case 3: console.log("It's Wednesday");
+                                break;
+                                case 4: console.log("It's Thursday");
+                                break;
+                                case 5: console.log("It's Friday");
+                                break;
+                                case 6: console.log("It's Saturday");
+                                break;
+                                default: console.log("Out of Range..!!");
+                            }
+                        })
+                    </script>
+                </li>
+            </div>
+        </div>
+
+        <h1>Conditional looping logic Question</h1>
+        <div class="main">
+            <!-- 30 -->
+            <div>
+                <li class="que">Q.30 What are the looping structures in JavaScript? Any one Example?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 31 -->
+            <div>
+                <li class="que">Q.31 Write a print 972 to 897 using for loop in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 32 -->
+            <div>
+                <li class="que">Q.32 Write to print factorial of given number?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 33 -->
+            <div>
+                <li class="que">Q.33 Write to print Fibonacci series up to given numbers?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 34 -->
+            <div>
+                <li class="que">Q.34 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 35 -->
+            <div>
+                <li class="que">Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 36 -->
+            <div>
+                <li class="que">Q.36 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: - 5) in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 37 -->
+            <div>
+                <li class="que">Q.37 Use console.log() and escape characters to print the following pattern in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 38 -->
+            <div>
+                <li class="que">Q.38 Use pattern in console.log in JS?</li>
+                <li><span class="arr">==></span> Pattern 1 :
+                    <script>
+                        let n = 5;
+                        for(let i=65;i<91;i++) {
+                            for(let j=0;j<n;j++) {
+                                document.write(String.fromCharCode(i));
+                            }
+                            document.write("<br>")
+                        }
+                    </script>
+                </li>
+            </div>
+            <!-- 39 -->
+            <div>
+                <li class="que">Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+        </div>
+
+        <h1>Array and object Question</h1>
+        <div class="main">
+            <!-- 40 -->
+            <div>
+                <li class="que">Q.40 Write a JavaScript Program to display the current day and time in the following format. Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 41 -->
+            <div>
+                <li class="que">Q.41 Write a JavaScript program to get the current date?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 42 -->
+            <div>
+                <li class="que">Q.42 Write a JavaScript program to compare two objects?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 43 -->
+            <div>
+                <li class="que">Q.43 Write a JavaScript program to convert an array of objects into CSV string?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 44 -->
+            <div>
+                <li class="que">Q.44 Write a JavaScript program to capitalize first letter of a string?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 45 -->
+            <div>
+                <li class="que">Q. 45 Write a JavaScript program to determine if a variable is array?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 46 -->
+            <div>
+                <li class="que">Q.46 Write a JavaScript program to clone an array?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 47 -->
+            <div>
+                <li class="que">Q.47 What is the drawback of declaring methods directly in JavaScript objects?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 48 -->
+            <div>
+                <li class="que">Q.48 Print the length of the string on the browser console using console.log()?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 49 -->
+            <div>
+                <li class="que">Q.49 Change all the string characters to capital letters using toUpperCase() method?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 50 -->
+            <div>
+                <li class="que">Q.50 What is the drawback of declaring methods directly in JavaScript objects?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 51 -->
+            <div>
+                <li class="que">Q.51 Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 52 -->
+            <div>
+                <li class="que">Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 53 -->
+            <div>
+                <li class="que">Q,53 Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of JavaScript?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 54 -->
+            <div>
+                <li class="que">Q.54 Form Validtion in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 55 -->
+            <div>
+                <li class="que">Q.55 Form in Email, number, Password, Validation?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 56 -->
+            <div>
+                <li class="que">Q.56 Dynamic Form Validation in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 57 -->
+            <div>
+                <li class="que">Q.57 how many type of JS Event? How to use it ?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 58 -->
+            <div>
+                <li class="que">Q.58 What is Bom vs Dom in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 59 -->
+            <div>
+                <li class="que">Q.59 Array vs object defences in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 60 -->
+            <div>
+                <li class="que">Q.60 Split the string into an array using split() Method?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 61 -->
+            <div>
+                <li class="que">Q.61 Check if the string contains a word Script using includes() method?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 62 -->
+            <div>
+                <li class="que">Q.62 Change all the string characters to lowercase letters using toLowerCase() Method.</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 63 -->
+            <div>
+                <li class="que">Q.63 What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt() method.</li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 64 -->
+            <div>
+                <li class="que">Q.64 copy to one string to another string in JS?</li>
+                <li><span class="arr">==></span></li>
+            </div>
+        </div>
+
+        <h1>Queston 66 sub Q&A</h1>
+        <div class="main">
+            <!-- 1 -->
+            <div>
+                <li class="que">1. What is JavaScript? </li>
+                <li><span class="arr">==></span> JavaScript is a client-side scripting language. It is object oriented language.
+                    <br><span class="arr">==></span> JavaScript is used to make dynamic changes in a webpage. The behaviour of html element can also be changed by using Javascript.
+                </li>
+            </div>
+            <!-- 2 -->
+            <div>
+                <li class="que">2. What is the use of isNaN function? </li>
+                <li><span class="arr">==></span> The JavaScript isNaN() Function is used to check whether a given value is an illegal number or not.</li>
+            </div>
+            <!-- 3 -->
+            <div>
+                <li class="que">3. What is negative Infinity? </li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 4 -->
+            <div>
+                <li class="que">4. Which company developed JavaScript? </li>
+                <li><span class="arr">==></span> JavaScript was created at Netscape Communications by Brendan Eich in 1995.</li>
+            </div>
+            <!-- 5 -->
+            <div>
+                <li class="que">5. What are undeclared and undefined variables? </li>
+                <li><span class="arr">==></span> undefied : When we declare a variable but does not assign a value to it and print/console it, it will display undefined.</li>
+                <li><span class="arr">==></span> undeclare : When we do not declare a variable but try to print/console it, it will throw declaration error.</li>
+            </div>
+            <!-- 6 -->
+            <div>
+                <li class="que">6. Write the code for adding new elements dynamically? </li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 7 -->
+            <div>
+                <li class="que">7. What is the difference between ViewState and SessionState? </li>
+                <li><span class="arr">==></span></li>
+            </div>
+            <!-- 8 -->
+            <div>
+                <li class="que">8. What is === operator? </li>
+                <li><span class="arr">==></span> The '===' operator is known as the strict equals to. It just not noly checks the value of the compared variables but also checks its datatyle. If the datatype/value any of the value is not same it will throw false as output.</li>
+            </div>
+            <!-- 9 -->
+            <div>
+                <li class="que">9. How can the style/class of an element be changed? </li>
+                <li><span class="arr">==></span> In Javascript, we can change the style/class of an element using two methods;
+                    <br>1. elementName.style.cssPropertyName = "cssPropertyValue";
+                    <br>2. elementName.classlist.add('.classname');
+                </li>
+            </div>
+            <!-- 10 -->
+            <div>
+                <li class="que">10. How to read and write a file using JavaScript? </li>
+                <li><span class="arr">==></span> In JavaScript fread() function is used to read the file, and fwrite() function is used to write content to file.</li>
+            </div>
+            <!-- 11 -->
+            <div>
+                <li class="que">11. What are all the looping structures in JavaScript? </li>
+                <li><span class="arr">==></span> The looping structures in JavaScript are listed below :
+                    <br>1. for loop 
+                    <br>2. while loop
+                    <br>3. do-while loop
+                    <br>4. for-in loop
+                    <br>5. for-of loop
+                    <br>6. foe-each loop
+                </li>
+            </div>
+            <!-- 12 -->
+            <div>
+                <li class="que">12. How can you convert the string of any base to an integer in JavaScript? </li>
+                <li><span class="arr">==></span> We can convert the string of any base to an Integer using parseInt() method in JavaScript.</li>
+            </div>
+            <!-- 13 -->
+            <div>
+                <li class="que">13. What is the function of the delete operator? </li>
+                <li><span class="arr">==></span> In JavaScript, the delete Operator is used to remove a property from an object.</li>
+            </div>
+            <!-- 14 -->
+            <div>
+                <li class="que">14. What are all the types of Pop up boxes available in JavaScript? </li>
+                <li><span class="arr">==></span> There are three types of pop up boxes available in JavaScript :
+                    <br>1. alert()
+                    <br>2. Confirm()
+                    <br>3. prompt()
+                </li>
+            </div>
+            <!-- 15 -->
+            <div>
+                <li class="que">15. What is the use of Void (0)? </li>
+                <li><span class="arr">==></span>  It is used to prevent any side effects caused while inserting an expression in a web page.</li>
+            </div>
+            <!-- 16 -->
+            <div>
+                <li class="que">16. How can a page be forced to load another page in JavaScript? </li>
+                <li><span class="arr">==></span> We can use window. location property inside the script tag to forcefully load another page in Javascript</li>
+            </div>
+            <!-- 17 -->
+            <div>
+                <li class="que">17. What are the disadvantages of using innerHTML in JavaScript? </li>
+                <li><span class="arr">==></span> It is very slow because as inner HTML already parses the content even we have to parse the content again so that's why it takes time</li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
