@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 9 ( React-JS )</title>
+</head>
+<body>
+    <h1 style="text-align: center;"><u> Module-9 [ React - Components, State, Props ] </u></h1>
+    <ol>
+        <li> <mark> <b> What is React Js? </b> </mark>  </li>
+        <p>=> React is a JavaScript library created by Facebook.</p>
+        <p>=> React is a User Interface (UI) library.</p>
+        <p>=> React is a tool for building UI components.</p>
+        <hr />
+        <li> <mark> <b> What is NPM in React Js? </b> </mark>  </li>
+        <p>=> npm is also a software Package Manager and Installer</p>
+        <p>=> npm stands for "Node Package Manager"</p>
+        <p>=> npm is installed with Node.js</p>
+        <p>=> All npm packages are defined in files called package.json</p>
+        <hr />
+        <li> <mark> <b> What is Role of Node Js in react Js? </b> </mark>  </li>
+        <p>=> Node is the most popular platform for hosting and running web servers for React apps</p>
+        <p>=> We can install any package with NPM command-line interface CLI</p>
+        <p>=> Node utilizes Webpack and other modules to turn a React application into an easily compilable single file</p>
+        <p>=> The combination of Node and React allows developers to build dynamic, large, data-driven web apps that are responsive across multiple devices</p>
+        <hr />
+        <li> <mark> <b> What is CLI command In React Js? </b> </mark>  </li>
+        <p>=> CLI stands for Command Line Interface/Interpreter/Input</p>
+        <p>=> CLI commands are currently only used to create a passable version of a react application using the command line</p>
+        <p>=> This will contain a default template as its design, so all the react application created this way will have great consistency as they all have same structure</p>
+        <hr />
+        <li> <mark> <b> What is Components in React Js? </b> </mark>  </li>
+        <p>=> In React, components serve as independent and reusable code blocks for UI elements</p>
+        <p>=> They represent different parts of a web page and contain both structure and behavior</p>
+        <p>=> They are similar to JavaScript functions and make creating and managing complex user interfaces easier by breaking them down into smaller, reusable pieces</p>
+        <p>=> Components promote efficiency and scalability in web development by allowing developers to compose, combine, and customize them as needed</p>
+        <p>=> React Components comes in two types :
+            <ol type="i">
+                <li>Class Component</li>
+                <li>Function Component</li>
+            </ol>
+        </p>
+        <hr />
+        <li> <mark> <b> What is Header and Content Components in React Js? </b> </mark>  </li>
+        <p>=> header components & content components both can be reused across multiple pages or sections within a React application to maintain consistency and improve maintainability</p>
+        <h4> <u> Header Component</u> : </h4>
+        <p>=> In React.js, a header component is a reusable piece of UI code responsible for rendering the header section of a web application</p>
+        <p>=> The header typically contains elements like the website's logo, navigation menu, and possibly other important information or controls</p>
+        <h4> <u> Content Component</u> : </h4>
+        <p>=> In React.js, content components refer to reusable pieces of UI code responsible for rendering the main content area of a web application</p>
+        <p>=> Unlike the header, footer, or sidebar components, which typically provide structural elements or navigation, content components focus on displaying the primary content specific to a particular page or section of the application</p>
+        <p>=> Content components can vary widely based on the specific needs of the application</p>
+        <p>=> They might include components for displaying articles, product listings, user profiles, forms, or any other type of content relevant to the application</p>
+        <p>=> The Content component is a functional component that returns JSX representing the main content area</p>
+        <hr />
+        <li> <mark> <b> How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM? </b> </mark> </li>
+        <h3>* <u>Steps to install Node Js and NPM on Windows Os and Linux Os :</u></h3>
+        <p><b>Windows</b> :
+            <ul>
+                <ol>
+                    <li><u>Download Node.js Installer</u>: Go to the official Node.js website and download the Windows installer.</li>
+                    <li><u>Run Installer</u>: Double-click the downloaded installer file and follow the prompts to install Node.js and npm. The installer will guide we through the installation process.</li>
+                    <li><u>Verify Installation</u>: Open Command Prompt (or PowerShell) and type the "node -v" & "npm -v" commands to verify that Node.js and npm are installed</li>
+                </ol>
+            </ul>
+        </p>
+        <p><b>Linux</b> :
+            <ul>
+                <ol>
+                    <li><u>Using Package Manager</u>: Many Linux distributions come with Node.js and npm available in their package repositories. we can use the package manager of our distribution to install them</li>
+                    <li><u>Verify Installation</u>: Open a terminal and type the "node -v" & "npm -v" commands to verify that Node.js and npm are installed</li>
+                </ol>
+            </ul>
+        </p>
+        <h3>* <u>Steps to install React Js :</u></h3>
+        <p>
+            <ol>
+                <li>Open a terminal</li>
+                <li>Run the "npm install -g create-react-app" command to install create-react-app globally</li>
+                <li>Once create-react-app is installed, we can create a new React project by running "npx create-react-app (app name of our choice)" command</li>
+                <li>Navigate into our newly created React project directory using "cd my-react-app" command.</li>
+                <li>Start the development server by running "npm start" command</li>
+            </ol>
+        </p>
+        <h3>* <u>To check the version of npm installed on our system, we can use the "npm -v" command in the terminal</u></h3>
+        <hr />
+        <li> <mark> <b> How to check version of React Js? </b> </mark>  </li>
+        <p><h3>* We can check the version of React.js by following the below steps: </h3></p>
+        <ol>
+            <li><u>Using npm</u> :</li>
+            <ol type="I">
+                <li>Open a terminal</li>
+                <li>Navigate to the React project directory if we're not already there using "cd/path/to/our/react/project" command</li>
+                <li>Run the "npm list react" command to display the version of React.js installed in our project</li>
+            </ol>
+            <br />
+            <li><u>Using Yarn</u> : </li>
+            <ol type="I">
+                <li>Open a terminal</li>
+                <li>Navigate to the React project directory if we're not already there using "cd/path/to/our/react/project" command</li>
+                <li>Run the "yarn list react" command to display the version of React.js installed in the project</li>
+            </ol>
+        </ol>
+        <hr />
+        <li> <mark> <b> How to change in components of React Js? </b> </mark>  </li>
+        <p><h3>=> To change components in a React.js application, we'll typically edit the JSX code in our component files.</h3>
+            <ol>
+                <li> <u> Locate the Component File</u> : Identify the component file we want to change within our React project. This could be a `.js`, `.jsx`, or even `.tsx` file depending on our project setup</li>
+                <li> <u> Make Changes to JSX</u> : Open the component file using our preferred code editor. Inside the file, we'll find JSX code that defines the component's structure and behavior. Make the necessary modifications to this JSX code. For example, we can change text, add or remove elements, modify styles, or introduce conditional rendering and dynamic data</li>
+                <li> <u> Save the File</u> : Once we've made our changes, save the file</li>
+                <li> <u> View Changes in Browser</u> : If our development server is running (`npm start` or `yarn start`), the changes we made should be automatically reflected in our browser. If not, make sure to start the development server</li>
+                <li> <u> Test</u> : Open the browser and navigate to the corresponding page where the component is rendered. Verify that the changes appear as expected and that the component behaves correctly</li>
+                <li> <u> Repeat as Needed</u> : If we need to change other components, repeat the process by locating their respective files and making modifications</li>
+                <li> <u> Commit Changes (if using version control)</u> : If we're using version control (e.g., Git), consider committing our changes with descriptive commit messages to keep track of the modifications we've made.</li>
+            </ol>
+        </p>
+        <hr />
+    </ol>
+</body>
+</html>
